@@ -11,6 +11,7 @@ Features:
 - search bar
 - bookmarks (not user adjustable)
 - monthly calendar
+- mobile support
 
 The site is hosted using Cloudflare Pages.
 Search bar CSS taken from uiverse.io
