@@ -37,3 +37,40 @@ function updateGreeting() {
 }
 
 updateGreeting()
+
+function generateCalendar() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" 
+    ]
+
+    document.getElementById('month_year').innerText = `${monthNames[month]} ${year}`;
+    const daysContainer = document.getElementById('calendar_days');
+    daysContainer.innerHTML = "";
+
+    const firstDayIndex = new Date(year, month, 1).getDay();
+    const totalDays = new Date(year, month + 1, 0).getDate();
+    const today = now.getDate();
+
+    for (let i = 0; i < firstDayIndex; i++) {
+        const emptyDiv = document.createElement('div');
+        daysContainer.appendChild(emptyDiv);
+    }
+
+    for (let day = 1; day <= totalDays; day++) {
+        const dayDiv = document.createElement('div');
+        dayDiv.innerText = day;
+        dayDiv.classList.add('calendar_day');
+
+        if(day === today) {
+            dayDiv.classList.add('current_day');
+        }
+
+        daysContainer.appendChild(dayDiv);
+    }
+}
+
+generateCalendar()
