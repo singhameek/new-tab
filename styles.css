@@ -127,3 +127,42 @@
     height: 24px;
     margin: auto;
 }
+
+@media (max-width: 600px) {
+    .body {
+        gap: 20px;
+        padding: 10px;
+    }
+    .clock {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .greeting {
+        font-size: 16px;
+    }
+
+    .inputcont {
+        width: 90vw;
+        max-width: 350px;
+        height: 45px;
+    }
+
+    .input {
+        width: 82vw;
+        max-width: 320px;
+        height: 35px;
+        font-size: 13px;
+    }
+    .bookmarks{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px
+    }
+
+    .calendar_card {
+        width: 85vw;
+        max-width: 240px;
+        padding: 10px
+    }
+}
